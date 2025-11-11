@@ -6,7 +6,12 @@ def create_sub_folders(labels: list , data_directory: str, subset:str="train"):
         label_folder=os.path.join(data_directory, subset, label)
         if not os.path.exists(label_folder):
             os.makedirs(label_folder)
-
+def write_labels_text(labels: list , data_directory: str):
+    file_path=os.path.join(data_directory, "labels.txt")
+    with open(file_path, 'wt') as file:
+        for label in labels:
+            file.write(label+"\n")
+        file.write("\n")
 
 def get_labels(data_directory:str="Data/asl_dataset")->list:
     items=os.listdir(data_directory)
@@ -22,5 +27,7 @@ def main():
     output_dir="Data/asl_dataset_sorted"
     for subset in ["train", "val", "test"]:
         create_sub_folders(labels, output_dir, subset=subset)
+    write_labels_text(labels, output_dir)
+
 if __name__ == "__main__":
     main()
