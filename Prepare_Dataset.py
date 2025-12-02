@@ -13,7 +13,6 @@ def write_labels_text(labels: list , data_directory: str):
     with open(file_path, 'wt') as file:
         for label in labels:
             file.write(label+"\n")
-        file.write("\n")
 
 def get_labels(data_directory:str="Data/asl_dataset")->list:
     items=os.listdir(data_directory)
