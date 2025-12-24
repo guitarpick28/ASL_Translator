@@ -1,5 +1,5 @@
 # ASL_Translator
-This in the end will be a project used on the Jetson Nano to interpret American Sign Language(ASL) to help others understand this language.
+This in the end will be a project used on the Jetson Nano to interpret American Sign Language(ASL) to help others understand this language. A demonstration of the project in action can be viewed [here](https://youtu.be/ndX7zbz2v6U).
 ## General Instructions
 1. Go to the [Jetson Inference Project](https://github.com/dusty-nv/jetson-inference/tree/master) and set up the project according to their instructions.
 2. Clone this repository onto your Jetson Nano.
